@@ -1,0 +1,44 @@
+
+<html>
+    <head>
+        <title>jQueryStyle</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+  
+       <style type="text/css">
+        
+        #fadein {
+            display:none;
+        }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <P id=text>This is text</P>
+        <button id=toggle>Toggle Text</button>
+        
+
+       
+
+        <script type="text/javascript"> 
+
+        $("#toggle").click(function() {
+          if ($("#text").css("display") == "none") {
+              $("#text").fadeIn();
+          } else {
+              $("#text").fadeOut();
+          }
+          
+        })
+
+       
+
+           
+        </script>
+           
+    </body>
+
+</html>

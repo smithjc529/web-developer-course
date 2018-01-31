@@ -1,0 +1,505 @@
+<!doctype html>
+
+	<html>
+	
+		<head>
+	
+			<title>News Site</title>
+		
+			<style type="text/css">
+		
+				#topbar {
+				
+				width: 1000px;
+				margin:0 auto;
+				height: 40px; 
+				
+				}
+				
+				body {
+				
+					margin: 0;
+					padding: 0
+					font-family: Helvetica, Arial, sans-serif;
+					
+				}
+		
+				#logo {
+				
+					margin-top: 7px; 
+					width: 100px;
+					float: left; 
+					margin-right: 8px;
+					margin-left: 8px;
+				
+				}
+				
+				.topbar-section {
+				
+					float:left;
+					border-left: 1px #CCCCCC solid;
+					height:100%;
+				 
+				}
+				
+				.topbar-menu {
+				
+					font-weight: bold; 
+					font-size: 90%;
+					padding: 13px 15px 0px 15px;
+					height: 27px;
+				
+				}
+				
+				#signin-image {
+				
+					width: 25px;
+					margin: 10px 15px; 
+					float: left;
+				
+				}
+				
+				#signin-text {
+				
+					font-weight: bold;
+					font-size: 90%;
+					position: relative;
+					top: 12px;
+					padding-right: 40px;
+					padding-left: 10px;
+					
+				}
+				
+				#more {
+				
+					font-weight: bold;
+					font-size: 90%;
+					position: relative;
+					padding-bottom: 12px;
+					float: left;
+					
+				}
+		
+				#down-arrow {
+				
+					width: 16px;
+					margin-left: 15px;
+				
+				}
+				
+				#searchbox {
+				
+					background-color: #E4E4E4;
+					border: none;
+					font-weight: bold;
+					font-size: 14px;
+					padding: 5px;
+					margin: 5px 0px 5px 5px;
+					float: left;
+				
+				}
+				
+				#magglass {
+				
+					margin: 5px 0px 0px 0px;
+					height: 27px;
+				
+				}
+		 
+				.clear {
+				
+					clear: both;
+				
+				}
+				
+				#menu-bar-container{
+				
+					background-color: #BB1919;
+					width: 100%;
+	 				height: 70px;
+					
+				}
+					
+				#menu-bar {
+				
+					width:1000px;
+					margin:0 auto;
+				
+				}
+				
+				h1 {
+					
+					padding:0;
+					margin:0;
+					color:white;
+					font-size:40px;
+					font-weight:normal;
+					padding-top: 10px;
+					float:left;	
+					
+				}
+				
+				#news-bar-container {
+				
+					background-color:#A91717;
+					width: 100%;
+				
+				}
+				
+				#news-bar {
+				
+					width:1000px;
+					margin:0 auto;
+					height: 40px;
+				
+				}
+				
+				#news-bar a {
+				
+					color: white;
+					text-decoration: none;
+					padding: 0 10px;
+					border-right: 1px solid #BB4545;
+					font-size:20px;
+					position: relative;
+					top: 8px;
+				}
+				
+				#news-bar a:hover {
+				
+					text-decoration: underline;
+				
+				}
+				
+				.no-border {
+				
+					border:none !important;
+					
+				}
+				#newsarrow {
+				
+					position: relative;
+					
+				}
+					
+				#main-article {
+				
+					width: 700px;
+					float: left;
+				
+				}
+				
+				#page-container {
+				
+					width: 1000px;
+					margin:0 auto;
+					background-color: #ffffff;
+					
+				
+				}
+				
+				h2 {
+				
+					font-weight: normal;
+					margin-top: 40px;
+					font-size: 20px;
+					border-bottom: 2px solid #BB1919;
+					width: 95px;
+				
+				}
+					
+				h3 a {
+				
+					color: black;
+					font-size: 30px;
+					text-decoration: none;
+				
+				}
+				
+				h3 a:hover {
+				
+					color: #1167A8;
+				
+				}
+				
+				#article-summary {
+				
+					color: #5A5A5A;
+					width: 250px;
+					float: left;
+				
+				}
+				
+				.clock {
+				
+					position: relative;
+					top: 5px;
+				
+				}
+				
+				#topic-link {
+				
+					text-decoration: none;
+					color: #BB1919;
+					border-left: 1px solid #CCCCCC;
+					padding-left: 4px;
+						
+				}
+				
+				#article-summary a:hover {
+				
+					color: #1167A8; #CCCCCC
+				
+				}
+				
+				#article-container {
+				
+					float; left;
+					width: 650px;
+					border-right: 1px solid #CCCCCC
+				
+				}
+				
+				#article-pic {
+				
+					width: 400px;
+					
+				}
+				
+				#article-hr {
+				
+				border-top: 1px solid  #BB1919;
+				width: 50px;
+				
+				}
+				
+				.article-link {
+				
+				text-decoration: none;
+				color: black;
+				
+				}
+				#watch-listen {
+				Margin-left:20px;
+				width:280px;
+				float:right;
+				position: relative;
+				
+				
+				}
+				
+				h4 {
+				font-weight: normal;
+				font-size:20px;
+				}
+				.article-side-image {
+				float: left;
+				width: 90px;
+				margin-right:10px;
+				
+				}
+				.watch-listen-link {
+					text-decoration: none;
+					color:black;
+					font-weight:bold;
+					font-size:18px; 	
+				
+				}
+				
+				.watch-listen-link:hover {
+				color: #1167A8;
+				}
+				
+				.side-article {
+				float:right;
+				width:180px;
+				position:relative;
+				top: -18px;  
+				}
+				
+				
+			</style>
+			
+		</head>
+		
+	<body>
+	
+		<div id="topbar">
+		
+			<img id="logo" src="images/bbc-logo.png">
+			
+			<div id="sign-in-div" class="topbar-section">
+			
+				<img id="signin-image" src="images/signinimage.png">
+				
+				<span id="signin-text">Sign in</span>
+
+			</div>
+			
+			<div class="topbar-section topbar-menu">
+			
+				News
+			
+			</div>
+		
+			<div class="topbar-section topbar-menu">
+			
+				Sports
+			
+			</div>
+				
+			<div class="topbar-section topbar-menu">
+			
+				Weather
+			
+			</div>
+				
+			<div class="topbar-section topbar-menu">
+			
+				Shop
+			
+			</div>
+
+			<div class="topbar-section topbar-menu">
+			
+				Earth
+			
+			</div>
+
+			<div class="topbar-section topbar-menu">
+			
+				<span id="more">More</span>
+				
+				<img id="down-arrow" src="images/downarrow.png">
+			
+			</div>
+			
+			<div class="topbar-section">
+			
+				<input id="searchbox" type="text" value="search">
+				
+				<input type="image" id=magglass src="images/magglass.png">
+			
+			</div>
+			
+		</div>
+	
+		<div class="clear"></div>
+		
+		<div id="menu-bar-container">
+		
+			<div id="menu-bar">
+			
+			<h1>News</h1>
+					
+			</div>
+			
+			<div class="clear"></div>
+			
+			<div id="news-bar-container">
+			
+				<div id="news-bar">
+				
+					<a href="">Home</a>
+					
+					<a href="">Video</a>
+					
+					<a href="">World</a>
+					
+					<a href="">US & Canada</a>
+					
+					<a href="">UK</a>
+					
+					<a href="">Business</a>
+					
+					<a href="">Tech</a>
+					
+					<a href="">Science</a>
+					
+					<a href="">Stories</a>
+					
+					<a href="" class="no-border">More</a>
+					
+					<img id="newsarrow" src="images/newsarrow.png">
+							
+				</div>
+									
+			</div>
+		
+		</div>
+		
+		<div class="clear"></div>
+		
+		<div id="page-container">
+		
+			<div id="main_article">
+			
+				<h2>Technology</h2>
+				
+				<div id=article-container>
+				
+					<h3><a href="http://www.bbc.com/news/world-us-canada-42523045">
+					Man killed in Call of Duty 'swatting' hoax </a></h3>
+			
+					<div id="article-summary">
+				
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
+						Cras semper est  Donec volutpat, orci vitae
+						eu lacinia ante sem dignissim nulla.<p>
+					
+						<p><img class="clock" src="images/clock.png">31 December, 2017 
+						<a id="topic-link" href="">Technology</a></p>
+						
+						<hr id="article-hr" Align="left"></hr>
+						
+						<p><a class="article-link" href="http://www.bbc.com/news/magazine-36826297">
+						US police shootings: How many die each year?</a></p>
+						
+						<p><a class="article-link" href="http://www.bbc.com/news/world-us-canada-34996604">
+						Statistics behind US violence</a></p>
+				
+					</div>
+					
+					<img id="article-pic" src="images/article-pic.png">
+				
+				</div>
+			
+			</div>
+			
+			<div id="watch-listen">
+			
+				<h4>Watch/Listen</h4>
+				
+				<img class="article-side-image" src="images/article-one.png">
+				
+					<div class="side-article">
+					
+						<p><a class="watch-listen-link" href="http://www.bbc.com/news/av/technology-42577483/app-uses-dna-to-tell-you-what-to-eat">
+							App uses DNA to tell you what to eat</a></p>
+							
+						<p><img class="clock" src="images/clock.png">31 December, 2017 </p>
+						
+					</div>
+					
+					<div class="clear"></div>
+					
+				<img class="article-side-image" src="images/article-two.png">
+				
+					<div class="side-article">
+					
+						<p><a class="watch-listen-link" href="http://www.bbc.com/news/av/technology-42599199/test-driving-byton-s-futuristic-smart-car">
+							Test-driving Byton's futuristic smart car</a></p>
+							
+						<p><img class="clock" src="images/clock.png">31 December, 2017</p>
+					</div>
+					<div class="clear"></div>
+				
+					
+			</div>
+			
+		</div>
+		
+	
+	</body>
+			
+	</html>

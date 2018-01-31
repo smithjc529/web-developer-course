@@ -1,0 +1,43 @@
+
+<html>
+    <head>
+        <title>jQueryStyle</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+  
+       <style type="text/css">
+        
+        #fadein {
+            display:none;
+        }
+
+        </style>
+        
+    </head>
+
+    <body>
+
+        <P id=text>This is text</P>
+        <button id=fader>Fader</button>
+        <P id=fadeIn>Whoa!! It's magic!</p>
+        <button id="fadeButton">Fade In</button>
+
+       
+
+        <script type="text/javascript"> 
+
+        $("#fader").click(function() {
+          $("#text").fadeOut(); 
+        })
+
+        $("#fadeButton").click(function() {
+          $("#fadeIn").fadeIn();  
+
+        })
+
+           
+        </script>
+           
+    </body>
+
+</html>

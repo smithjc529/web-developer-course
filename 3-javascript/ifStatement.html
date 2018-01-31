@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <title>ifstatement</title>
+
+    </head>
+
+    <body>
+
+            <p>What is the word?</p>
+
+            <p><input type="text" id="word"></p>
+
+            <p><button id="checkWord">Enter word</button></p>
+
+
+
+
+
+        <script type="text/javascript">
+
+
+            document.getElementById("checkWord").onclick = function() {
+
+               var wordEntered = document.getElementById("word").value; 
+
+               var narf = "fred";
+
+               if (wordEntered == narf) {
+
+                   alert("Kapow!");
+
+               } else {
+
+                   alert("Stay Out!");
+               }
+
+
+            }
+
+           
+            
+            
+
+           
+           
+           
+        
+        </script>
+
+    </body>
+</html>

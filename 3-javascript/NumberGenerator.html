@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>Number Generator</title>
+
+       
+
+    </head>
+
+    <body>
+
+        <p>How many beans in the bag? <br> Guess a number between 1 and 10.</p>
+
+        <p><input type="text" id="guess"><button id="check">Guess!</button></p>
+        
+
+
+
+
+            
+
+
+
+
+        <script type="text/javascript">
+
+            document.getElementById("check").onclick = function() {
+                
+                var randomNumber = Math.random();
+                randomNumber = randomNumber * 11;
+                randomNumber = Math.floor(randomNumber);
+
+                if (document.getElementById("guess").value == randomNumber) {
+
+                    alert("You guessed it!");    
+
+                } else {
+
+                    alert( "Sorry. The number was " + randomNumber );
+                }
+
+            }
+
+          
+
+
+
+
+           
+
+           
+            
+            
+
+           
+           
+           
+        
+        </script>
+
+    </body>
+</html>
