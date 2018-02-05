@@ -51,6 +51,20 @@
 
             }
 
+            #errorMessage {
+
+               color: red; 
+               font-size: 90% !important;
+            }
+
+            #successMessage {
+
+                color: blue;
+                font-size: 90% !important;
+                display: none;margin-bottom:20px;
+
+            }
+
 
         </style>
     </head>
@@ -58,6 +72,10 @@
     <body>
 
         <div id="wrapper">
+
+            <div id=successMessage>Form Complete.</div>
+
+            <div id="errorMessage"></div>
 
             <div class="formElement">
 
@@ -68,7 +86,7 @@
 
             <div class="formElement">
 
-                <label for="telephone">Phone#:</label>
+                <label for="phone">Phone#:</label>
                 <input type="text" name="phone" id="phone" placeholder = "eg. 1234567890">
 
             </div>
@@ -105,26 +123,69 @@
             $("#submitButton").click(function() {
 
                 var errorMessage = "";
+                var fieldsMissing = "";
+
+                if ($("#email").val() == "") {
+
+                    fieldsMissing += "<br>*Email ";
+
+                }
+
+                if ($("#phone").val() == "") {
+
+                fieldsMissing += " <br>*Phone ";
+
+                }               
+
+                if ($("#password").val() == "") {
+
+                fieldsMissing += " <br>*Password ";
+
+                }               
+
+                if ($("#passwordConfirm").val() == "") {
+
+                fieldsMissing += " <br>*Confirm Password ";
+
+                }
+                
+                if (fieldsMissing != "") {
+
+                    errorMessage += "<p>The following field(s) are missing: " + fieldsMissing
+                }
+
 
                 if (isEmail($("#email").val()) == false) {
 
-                    errorMessage += "Invalid Email Entered.";
+                    errorMessage += "<p>*Invalid Email Entered.</p> ";
 
                }
 
                if ($.isNumeric($("#phone").val()) == false) {
 
-                    errorMessage += " Invalid Phone Number Entered.";
+                    errorMessage += " <p>*Invalid Phone Number Entered.</p> ";
 
                }
 
                if ($("#password").val() != $("#passwordConfirm").val()) {
 
-                    errorMessage += " Invalid Password Entered.";
+                    errorMessage += " <p>*Your Passwords Don't Match.</p> ";
+
+               }
+               
+               if (errorMessage != "") {
+
+                  $("#errorMessage").html(errorMessage); 
+
+               } else{
+
+                   $("#successMessage").show();
+                   $("#errorMessage").hide();
+
 
                }
 
-                alert(errorMessage);
+              
             });
 
 
