@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery-ui-draggable-vertical</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <script src="jquery-ui/jquery-ui.js"></script>
+
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+        <style>
+
+              #draggable { width: 150px; height: 150px; padding: 0.5em;
+              
+            }
+
+        </style>
+
+        <script type="text/javascript">
+
+            $( function() {
+                $( "#draggable" ).draggable({ axis: "y" });
+        } );
+
+        </script>
+
+    </head>
+
+    <body>
+
+        <div id="draggable" class="ui-widget-content">
+                    <p>Drag me around</p>
+        </div>
+
+    </body>
+
+</html>
