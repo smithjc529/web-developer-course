@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery-ui-draggable-container</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <script src="jquery-ui/jquery-ui.js"></script>
+
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+
+        <div id ="#container" style="width:400px;height:300px;background-color:yellow;">
+            <span>Click and drag text.</span>
+        </div>
+
+        <script type="text/javascript">
+
+            $( function() {
+                
+                $("span").draggable({containment: "parent"});
+        } );
+
+        </script>
+
+    </body>
+
+</html>
