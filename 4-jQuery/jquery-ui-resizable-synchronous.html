@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery-ui-resizable</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <script src="jquery-ui/jquery-ui.js"></script>
+
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+        <style type="text/css">
+        
+            #resizable {
+                
+                width: 150px;
+                height: 150px;
+                background-color: blue; 
+
+            }
+            #resizable h3 {
+                
+                text-align: center; margin: 0; 
+                
+            }
+
+            #also {
+                
+                width: 150px;
+                height: 150px;
+                background-color: red; 
+
+            }
+            #also h3 {
+                
+                text-align: center; margin: 0; 
+                
+            }
+        
+        </style>
+
+       
+    </head>
+
+    <body>
+
+        <div id="resizable" class="ui-widget-content">
+            <h3 class="ui-widget-header">Resizable</h3>
+        </div>
+
+        <div id="also" class="ui-widget-content">
+            <h3 class="ui-widget-header">Also</h3>
+        </div>
+
+        <script type="text/javascript">
+
+            
+            $("#resizable").resizable({
+                 grid:50,
+                 alsoResize: "#also"
+            });
+
+                $("#also").resizable();
+
+        </script>
+
+    </body>
+
+</html>
