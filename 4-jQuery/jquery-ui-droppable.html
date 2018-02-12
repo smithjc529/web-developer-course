@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>jQuery-ui-droppable</title>
+
+        <script type="text/javascript" src="jquery.min.js"></script>
+
+        <script src="jquery-ui/jquery-ui.js"></script>
+
+        <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+
+        <style type="text/css"> 
+
+        #draggable {
+
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+           
+        } 
+
+        #droppable {
+
+            width: 300px;
+            height: 300px;
+            background-color: yellow;
+           
+        }
+
+        </style>
+
+    </head>
+
+    <body>
+        
+        <div id="draggable">
+                <p>Drag this to there.</p>
+            </div>
+        
+        <div id="droppable">
+                <p>Drop it here.</p>
+            </div>
+
+        <script type="text/javascript">
+
+        $("#draggable").draggable();
+        $("#droppable").droppable({
+            drop: function( event, ui ) {
+             $( this )
+             .addClass( "ui-state-highlight" )
+             .find("p")
+                .html("Dropped!");
+            }
+        } );
+  
+        </script>
+    
+        
+      
+       
+
+    </body>
+
+</html>
